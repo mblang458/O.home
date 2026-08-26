@@ -93,7 +93,9 @@ export default function BoardDetailPage() {
     setCmtRows([...cmtRows, c]);
     setCmt(''); setReplyTo(null);
   };
-
+{/* 코멘트 영역 삭제/주석 처리 */}
+{/* <CommentSection postId={post.id} /> */}
+  
   // 댓글 삭제 — 대댓글도 함께. 옛 글 안에 있던 댓글이면 글 쪽에서 지운다 (v2.0)
   const removeComment = (c: Comment) => {
     const gone = (x: { id: string; parentId?: string }) => x.id === c.id || x.parentId === c.id;
